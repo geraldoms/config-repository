@@ -9,8 +9,6 @@ eureka:
   client:
     region: default
     registryFetchIntervalSeconds: 5
-    serviceUrl:
-      defaultZone: http://discUser:secret@localhost:8761/eureka/
 
 management:
   security:
