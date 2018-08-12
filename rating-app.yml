@@ -1,0 +1,15 @@
+server:
+  port: 8283
+
+spring:
+  application:
+    name: rating-app
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+
+management:
+  security:
+    sessions: never
