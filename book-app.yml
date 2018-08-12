@@ -4,3 +4,8 @@ server:
 spring:
   application:
     name: book-app
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discUser:secret@localhost:8761/eureka/
