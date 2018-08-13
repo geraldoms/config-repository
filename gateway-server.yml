@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway-server
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+
+management:
+  security:
+    sessions: always
+
+zuul:
+  routes:
+    rating-app:
+      path: /rating-app/**
+      sensitive-headers: Set-Cookie,Authorization
+    book-app:
+      path: /book-app/**
+      sensitive-headers: Set-Cookie,Authorization
+    discovery-server:
+      path: /discovery-server/**
+      sensitive-headers: Set-Cookie,Authorization
+      url: http://localhost:8761
+
+hystrix:
+  command:
+    rating-app:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500000
+    book-app:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500000
+    discovery-server:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500000
