@@ -4,9 +4,6 @@ server:
 spring:
   application:
     name: book-app
-  redis:
-    host: localhost
-    port: 6379
 
 eureka:
   client:

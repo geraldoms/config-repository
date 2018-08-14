@@ -1,0 +1,12 @@
+# Put all global configuration here
+some:
+  property: global
+  other:
+    property: global
+
+spring:
+  session:
+    store-type: redis
+  redis:
+    host: localhost
+    port: 6379
