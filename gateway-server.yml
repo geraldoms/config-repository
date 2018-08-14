@@ -18,9 +18,11 @@ zuul:
   routes:
     rating-app:
       path: /rating-app/**
+      serviceId: rating-app
       sensitive-headers: Set-Cookie,Authorization
     book-app:
       path: /book-app/**
+      serviceId: book-app
       sensitive-headers: Set-Cookie,Authorization
     discovery-server:
       path: /discovery-server/**
